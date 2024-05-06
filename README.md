@@ -1,6 +1,6 @@
 website include : 9 pages  (accessible in navbar by each)
 
-1   Home
+1   Home <be>
 2   Store
 3   Pc
 4   Console
