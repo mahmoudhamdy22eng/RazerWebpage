@@ -1,0 +1,41 @@
+
+
+/* empty card */
+.title-position{
+    color:rgb(0, 0, 0) !important;
+}
+.card-subtitle1{
+    color: rgb(3, 3, 3) !important;
+}
+.title-position2{
+    color:rgb(0, 0, 0) !important;
+}
+
+
+/* discription card */
+
+/* Carousal */
+.textff{
+    color: rgb(68 , 214, 44) !important; 
+    font-size: large;
+    text-decoration: none;
+}
+.textff:hover{
+    color: rgb(255, 255, 255) !important;
+    text-decoration: underline;
+}
+
+
+
+ /* components bar  */
+.nv2{
+    margin-left:6%;
+}
+.components{
+   padding: 0px 0px 0px 0px !important;
+   margin-right: -25px !important;
+   justify-self:center;
+   justify-items: center;
+}
+
+

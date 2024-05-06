@@ -1,0 +1,26 @@
+
+
+.discription1{
+    padding: 60px 100px ;
+    background-color:rgb(17, 17, 17) ;
+}
+.cards{
+    background-color: rgb(17, 17, 17) !important;
+    margin-bottom: 20px;
+    border-bottom: solid 1px  rgb(68 , 214, 44) !important;
+}
+
+.imgcard{
+    transition-duration: .4s;
+    transform-box:view-box;
+}
+.imgcard:hover{
+    transform: scale(1.1);
+}
+
+.card-title1{
+    color: white !important;
+}
+.card-text1 , .textfff{
+    color: rgb(204, 203, 203);
+}

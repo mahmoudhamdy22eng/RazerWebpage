@@ -1,0 +1,66 @@
+body{
+   background-color: black !important;
+}
+
+.nvposition{
+    position: absolute;
+    margin-bottom: 5% !important;
+
+}
+.nv1{
+    border-bottom: solid 1px rgb(68, 214, 44);
+}
+
+.navbar-brand, .nav-link {
+    padding-right: 40px;
+ color: rgb(151, 149, 149) !important;
+}
+.navbar-toggler{
+    color:rgb(32, 129, 17)!important;
+}
+.navbar-toggler:hover{
+    color: rgb(68, 214, 44) !important;
+}
+.nav-link:hover{
+    color: white !important;
+}
+.nav-item{
+    padding-right: 35px;
+}
+
+
+
+
+.carousel-caption{
+    top: 20px;
+    height: 30px;
+    
+}
+.mouselink{
+    text-decoration: none;
+    color:white;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.mouselink:hover{
+    text-decoration: underline;
+}
+.carousel{
+    border-bottom: 10px solid rgb(34, 34, 34);
+}
+
+
+
+.gamers{
+    color:rgb(68, 214, 67) !important;
+}
+
+.textf{
+    color: rgb(153, 153, 153) !important;
+    text-decoration: none;
+}
+.textf:hover{
+    color: white !important;
+    text-decoration: underline;
+}

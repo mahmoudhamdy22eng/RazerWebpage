@@ -1,0 +1,11 @@
+if (typeof pnx_common_run_seo == 'undefined' && typeof pnx_common_run == 'undefined') {
+//PNX_COMMON - START
+var pnx_common_run_seo_script = function () {
+    if(!document.querySelector('script[src$="pnx_common.min.js"]')){
+        const scriptCommon = document.createElement("script");
+        scriptCommon.setAttribute("src","https://assets2.razerzone.com/js/pnx.assets/pnx_common.min.js");
+        document.querySelector('body').appendChild(scriptCommon);
+    }
+}
+pnx_common_run_seo_script();
+}

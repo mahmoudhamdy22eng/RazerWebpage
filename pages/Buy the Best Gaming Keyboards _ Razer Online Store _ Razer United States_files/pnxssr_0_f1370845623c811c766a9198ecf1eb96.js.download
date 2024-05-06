@@ -1,0 +1,37 @@
+var influencerMap = {
+    'influencer_William_Morris_Endeavor': ["hero-timthetatman"],
+    'influencer_VShojo': ["hero-ironmouse"],
+    'influencer_NoWay4u': ["hero-noway4u"],
+    'influencer_KaleiAspeland': ["hero-kalei"],
+    'influencer_neekolul': ["hero-neekolul"],
+    'influencer_PaladinAmber': ["hero-paladinamber"]
+}
+const influencer_queryString = window.location.search;
+const influencer_urlParams = new URLSearchParams(influencer_queryString);
+var campaign_influencer = "";
+var showInfluencerBanner = function(e) {
+    var current_influencer = influencerMap[campaign_influencer];
+    current_influencer.forEach(element => {
+        if (document.querySelector("#"+element)) {
+            if (element.substr(0, 4) == "hero") {
+                document.querySelector("#"+element).style.display = "flex";
+            }
+            else {
+                document.querySelector("#"+element).style.display = "block";
+            }
+        } 
+    });
+}
+var exist_influencer = sessionStorage.getItem('influencer_title');
+if (influencer_urlParams.get('utm_source')) {
+    var campaign_influencer = influencer_urlParams.get('utm_source').replace(/\s+/g, '_');
+    campaign_influencer = 'influencer_'+campaign_influencer;
+    if (influencerMap[campaign_influencer]) {
+        sessionStorage.setItem('influencer_title',campaign_influencer);
+        showInfluencerBanner();
+    }
+}
+else if (exist_influencer) {
+    campaign_influencer = exist_influencer;
+    showInfluencerBanner();
+}

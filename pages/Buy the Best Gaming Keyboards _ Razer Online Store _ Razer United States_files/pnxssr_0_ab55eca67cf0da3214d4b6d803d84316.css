@@ -1,0 +1,54 @@
+.store-panel-header {
+  position: relative;
+  display: block;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.store-panel-header .store-panel-header-content {
+  padding: 2.5rem 0.5rem 0;
+}
+.store-panel-header h1, .store-panel-header h2, .store-panel-header-content .subheader {
+  line-height: 1.2;
+  text-align: left;
+  color: #9a9a9a;
+  margin: 0;
+  padding: 0;
+}
+.store-panel-header h1,
+.store-panel-header h2 {
+  font: 700 2.25rem/2.625rem "Titillium Web", "RazerF5", Arial, Helvetica, sans-serif;
+  display:block;
+  text-transform: uppercase;
+}
+.store-panel-header-content .subheader {
+  font: normal 1.125rem/1.5rem "Roboto";
+  margin-top: -0.2rem;
+}
+.store-panel-header h1, .store-panel-header h2 {
+  color: #44d62c;
+}
+.store-panel-header-content .normal-case-text {
+	text-transform: none !important;
+}
+            @media (max-width: 414px) {
+  .store-panel-header h1, .store-panel-header h2 {
+    word-break: break-word;
+    font-size: min(8vw, 1.75rem);
+  }
+}
+@media (max-width: 767px) {
+  .store-panel-header {
+    padding: 0 1.125rem;
+  }
+  .store-panel-header h1, .store-panel-header h2 {
+  	font: 700 1.75rem/1 "Titillium Web", "RazerF5", Arial, Helvetica, sans-serif;
+    margin-bottom: 0.3rem;
+  }
+  .store-panel-header-content .subheader {
+  	letter-spacing: 0px;
+  	color: #9a9a9a;
+  }
+  .store-panel-header .store-panel-header-content {
+    padding: 2.5rem 0 0;
+  }
+}

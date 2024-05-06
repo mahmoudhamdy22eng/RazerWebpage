@@ -1,0 +1,64 @@
+var assignAutoHeadingLevel = function(){
+	let level = 1;
+	let rootlevel = 1;
+	let samelevel = 0;
+	let parent = null;
+	document.querySelectorAll('h1,[role="heading"][aria-level="1"],h2,[role="heading"][aria-level="2"],h3,[role="heading"][aria-level="3"],h4,[role="heading"][aria-level="4"],h5,[role="heading"][aria-level="5"],h6,[role="heading"][aria-level="6"],.auto-heading').forEach(function(h){
+		let isWithinSameContainer = false;
+		
+		if(parent && parent.contains(h)){
+			isWithinSameContainer = true;
+		}
+		
+		if(["H1","H2","H3","H4","H5","H6"].includes(h.tagName)){
+			let htag = h.tagName.toString();
+			htag = parseInt(htag[1]);
+			if(htag - level <= 1){
+				level = htag;
+				rootlevel = level;
+				parent = h.closest("section");
+			}
+		}
+		else if(h.getAttribute("aria-level")){
+			let htag = parseInt(h.ariaLevel);
+			if(htag - level <= 1){
+				level = parseInt(h.ariaLevel);
+				rootlevel = level;
+				parent = h.closest("section");
+			}
+		}else{
+			if(h.textContent.trim() != "" && h.querySelectorAll('h1,[role="heading"][aria-level="1"],h2,[role="heading"][aria-level="2"],h3,[role="heading"][aria-level="3"],h4,[role="heading"][aria-level="4"],h5,[role="heading"][aria-level="5"],h6,[role="heading"][aria-level="6"]').length == 0){
+				if(isWithinSameContainer){
+					if(h.classList.contains("same-heading") && samelevel == 0){
+						level = (level+1 > 6)?6:level+1;
+						samelevel = level;
+						h.innerHTML = `<h${samelevel}>${h.innerHTML}</h${samelevel}>`;
+					}
+					else if(h.classList.contains("same-heading") && samelevel != 0){
+						h.innerHTML = `<h${samelevel}>${h.innerHTML}</h${samelevel}>`;
+						level = samelevel;
+					}else{
+						level = (level+1 > 6)?6:level+1;
+						if(h.classList.contains("same-heading")){
+							samelevel = level;
+						}
+						h.innerHTML = `<h${level}>${h.innerHTML}</h${level}>`;
+					}
+					parent = h.closest("section");
+					
+				}else{
+					level = (rootlevel+1 > 6)?6:rootlevel+1;
+					samelevel = 0;
+					if(h.classList.contains("same-heading")){
+						samelevel = level;
+					}
+					h.innerHTML = `<h${level}>${h.innerHTML}</h${level}>`;
+					parent = h.closest("section");
+					
+				}
+				
+			}
+		}
+
+	});
+};

@@ -1,0 +1,38 @@
+/* DO NOT ADD ANYTHING - SHAM */
+.store-effect.cards-scroll {
+  padding: 2.5rem 0 1rem !important;
+}
+.store-effect.cards-scroll .multi-panels {
+  margin-bottom: 1rem !important;;
+}
+.store-effect.cards-scroll .multi-panels ul li a.thumbnail-holder {
+  background-color: #111;
+}
+.store-effect.cards-scroll .headers {
+  padding: 0 0.5rem;
+}
+.store-effect.cards-scroll .headers div p, .store-effect.cards-scroll .headers div.paragraphs h2,
+.store-effect.cards-scroll .headers h2, .store-effect.cards-scroll .headers h1 {
+  line-height: 1.2;
+  text-align: left;
+}
+.store-effect.cards-scroll .headers > div:first-child {
+  margin-top: 2.5rem;
+}
+.store-effect.cards-scroll svg path {
+    fill: #44d62c;
+}
+@media (max-width: 767px) {
+  .store-effect.cards-scroll .headers {
+    padding: 0 1.125rem;
+  }
+  .store-effect.cards-scroll .headers div {
+    flex-direction: column;
+  }
+  .store-effect.cards-scroll .headers div a {
+    display: block;
+    flex: 0;
+    text-align: right;
+    margin: 1rem 0;
+  }
+}
